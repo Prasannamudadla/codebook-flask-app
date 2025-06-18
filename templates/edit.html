@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{%block content %}
+<div class="container">
+<h2>Edit Question </h2>
+
+<form method = "POST">
+    <label>Title:</label><br>
+    <input type = "text" name = "title" value= "{{question.title}}" required><br><br>
+
+
+    <label>Topic:</label><br>
+    <input type = "text" name = "topic" value ="{{question.topic}}" required><br><br>
+
+    <label>Status:</label><br>
+    <select name = "status" required>
+        <option value = "Unsolved" {% if question.status == "Unsolved" %}selected {% endif %}>Unsolved</option>
+        <option value = "Solved"   {% if question.status == "Solved" %}selected {% endif %}>Solved</option>
+
+    </select><br><br>
+
+    <label>Notes:</label><br>
+    <textarea name ="notes" rows ="4">{{question.notes}}</textarea><br><br>
+
+    <button type = "submit">Update Question</button>
+</form>
+</div>
+{% endblock %}

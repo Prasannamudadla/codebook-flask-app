@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>CodeBook</title>
+    <link rel = "stylesheet" href = "{{url_for('static', filename = 'style.css')}}">
+</head>
+<body>
+    <!--Navigation bar-->
+    <nav>
+        <a href = "/">Home</a> |
+        <a href = "/about">About</a> |
+        <a href = "/contact">Contact</a>
+        <a href = "/tracker">Tracker</a>
+        <a href = "/add">Add Question</a>
+    </nav>
+
+    <!--Page content will be filled here-->
+    <div class = "container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

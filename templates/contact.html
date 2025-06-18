@@ -1,0 +1,21 @@
+ {%extends "base.html" %}
+
+
+ {%block content%}
+ <h2> Contact Us</h2>
+ <p> Email us at: codebook@example.com</p>
+
+ <form method = "POST" action = "/contact">
+    <label  for  = "name">Name:</label><br>
+    <input  type =  "text" name ="name" required><br><br>
+
+    <label for = "email">Email:</label><br>
+    <input type = "email" name = "email" required><br><br>
+
+    <label for ="message">Message</label><br>
+    <textarea name = "message" rows = "5" required ></textarea><br><br>
+
+    <button type = "submit">Send</button>
+
+ </form>
+ {% endblock %}
